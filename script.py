@@ -2,7 +2,7 @@
 ### This script generates intensity distribution from circles automatically detected.
 ###
 
-import numpy
+import numpy,sys
 import matplotlib,matplotlib.pyplot 
 import skimage,skimage.io,skimage.feature,skimage.transform
 
@@ -17,9 +17,13 @@ inputImageFile='day.2.tif'
 
 # 1. read image
 print('reading image...')
-image=skimage.io.imread(inputImageFile)
-print(len(image))
+ima=skimage.io.imread(inputImageFile)
+image=numpy.array(ima)
+
+print(len(image),len(image[0]),len(image[0]))
 #print(image,numpy.max(image),numpy.min(image))
+
+sys.exit()
 
 # 2. detect edges
 print('detecting edges...')

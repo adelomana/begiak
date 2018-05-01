@@ -13,6 +13,9 @@ from skimage.util import img_as_ubyte
 
 image = img_as_ubyte(data.coins()[160:230, 70:270])
 print(image,np.max(image),np.min(image))
+print(len(image),len(image[0]),len(image[0][0])
+
+sys.exit()
 
 print('detecting edges...')
 edges = canny(image, sigma=3, low_threshold=10, high_threshold=50)
